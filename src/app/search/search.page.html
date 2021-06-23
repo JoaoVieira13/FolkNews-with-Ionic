@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <form>
+      <ion-back-button defaultHref="/ultimas"><ion-icon name="arrow-back-circle-outline" ></ion-icon></ion-back-button>
+      <ion-searchbar [(ngModel)]="news.title" name="title" onSubmit="news.title"></ion-searchbar>
+      <button [routerLink]="['search:todo']" (click)="pesquisa(news.title)"></button>
+    </form>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="titulo">
+  <strong>Resultados da pesquisa</strong>
+</div>
+
+<ng-container *ngFor="let new of news">
+  <a [routerLink]="['/noticia', new.id]" class="links">
+    <ion-card class="cardUltimas"   >
+      <img src="{{ new.multimediaPrincipal }}">
+      <ion-card-header>
+        <ion-card-title>{{ new.titulo }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        {{ new.descricao }}
+      </ion-card-content>
+      <ion-card-subtitle>
+        <p>Data: {{ new.data | date: "M/d/yy, h:mm a" }} </p>
+        <p>Autor: {{ new.autores[0].nome }}</p>
+      </ion-card-subtitle>
+    </ion-card>
+  </a>
+</ng-container>
+
+</ion-content>

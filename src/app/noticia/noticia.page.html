@@ -1,0 +1,83 @@
+<ion-content *ngIf="noticia">
+
+  <div class="titulo">
+    <div class="category">
+      <p><strong>{{noticia.tags[0].nome}}</strong></p>
+    </div>
+    <p><strong>{{ noticia.titulo }}</strong></p>
+  </div>
+  <img src="{{ noticia.multimediaPrincipal }}">
+
+  <div class="dados">
+    <p>Data: {{ noticia.data | date: "M/d/yy, h:mm a" }}</p>
+    <p>Autor: {{ noticia.autores[0].nome }}</p>
+  </div>
+
+  <div class="desc">
+    <h5> {{ noticia.descricao }}</h5>
+  </div>
+  <div class="texto">
+    <p>&nbsp; &nbsp; Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, delectus aliquam adipisci deserunt
+      totam vel enim iure. Aut impedit asperiores distinctio veniam adipisci animi sit odit, nulla vero natus tempora?
+    </p>
+  </div>
+  <div class="link">
+   FONTE :  <a (click)="partilharUrl(noticia.shareUrl)"> PÚBLICO</a>
+</div>
+  <br>
+  <div class="butoes">
+    <ion-button (click)="likeUP()" size="small">
+      <ion-icon name="thumbs-up"></ion-icon>{{ like }}
+    </ion-button>
+    <ion-button (click)="dislikeUP()" size="small">
+      <ion-icon name="thumbs-down"></ion-icon>{{ dislike }}
+    </ion-button>
+
+  <ion-fab horizontal="end">
+    <ion-fab-button>
+      <ion-icon name="share-social-outline"></ion-icon>
+    </ion-fab-button>
+
+  
+    <ion-fab-list side="start">
+      <ion-fab-button href="https://www.facebook.com">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button href="https://www.instagram.com">
+        <ion-icon name="logo-instagram"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button href="https://www.twitter.com">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+  <br>
+</div>
+
+  <div class="comentario">
+
+    <input name="comentar" [(ngModel)]="comments" placeholder="Insira um comentário">
+
+    <button (click)="postComment()">
+      <ion-icon name="arrow-down-circle-outline"></ion-icon>
+    </button>
+
+  </div>
+  <p>&nbsp; &nbsp; 1 comentário</p>
+
+  <div style="margin: 20px 5px 50px;border: 0.01px solid black; border-radius: 7px; background-color: #E3E0DF;" *ngFor= "let c of commentary">
+    <div class="card">
+      <ion-icon name="person-outline"></ion-icon>
+      <p> &nbsp;Utilizador</p>
+
+    </div>
+    <div class="texto">
+      <p>
+        {{c}} 
+      </p>
+    </div>
+  </div>
+</ion-content>
+
+
+

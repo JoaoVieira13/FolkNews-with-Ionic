@@ -1,0 +1,37 @@
+
+button{
+    margin-bottom: 13px;
+    background-color:white;
+}
+
+.items{
+display: flex;
+margin-top: 10px;
+}
+
+img{
+    width: 30px;
+    height: 30px;
+    margin-top: 20px;
+}
+
+.search{
+    display: flex;
+    margin-left: auto;
+    margin-top: 25px;
+    margin-right: 10px;
+}
+
+ion-icon{
+    width: 25px;
+    height: 25px;
+}
+
+ion-title{
+    margin-top: 25px;
+    font-size: 25px;
+    a{
+        text-decoration: none;
+        color: black;
+    }
+}

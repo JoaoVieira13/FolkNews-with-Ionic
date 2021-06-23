@@ -1,0 +1,65 @@
+.categoria {
+   margin-top: 20px; 
+} 
+
+.container{
+   padding: 10px;
+
+.centered{
+   text-align: center;
+}
+}
+
+.titulo{
+   text-align: center;
+   font-size: 26px;
+   margin-top: 10px;
+   margin-bottom: 40px;
+}
+
+ion-button{
+   width: 90px;
+   height: 30px;
+   margin-top:15px;
+   margin-bottom: 10px;
+   font-size: 12px;
+}
+
+ion-card-subtitle{
+   margin-left: 20px;
+   font-size: 10px;
+   text-align: justify;
+}
+
+ion-card-title{
+   font-size: 20px;
+}
+
+img{
+  object-fit: cover;
+  width: 100%;
+  height: 250px;
+}
+
+ion-card{
+   margin-bottom: 50px;
+   margin-top: -20px;
+}
+
+ion-content {
+   background-color: white;
+   --offset-bottom: auto !important;
+   --overflow: hidden;
+   overflow: auto;
+   &::-webkit-scrollbar {
+     display: none;
+   }
+ }
+ ion-card-content{
+   text-align: justify;
+ }
+
+ ion-slides{
+    margin-top:75px;
+    
+ }

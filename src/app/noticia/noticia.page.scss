@@ -1,0 +1,119 @@
+.titulo{
+text-align: center;
+margin-bottom: 25px;
+margin-top:100px;
+font-size: 20px;
+
+.category{
+    color: orange;
+    font-size: 20px;
+  }
+}
+
+.desc{
+    padding: 10px 15px 10px 10px;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    h5{
+        padding: 5px 15px 10px 10px;
+    }
+}
+.butoes{
+    justify-content: center;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+
+.comentario{
+    justify-content: center;
+    display: flex;
+
+    align-items: center;
+    margin-left: 10px;
+    input{
+        width:240px;
+        background-color: #F3f3f3;
+        margin-right:10px;
+        border-radius: 10px;
+    }
+    button{
+        height: 30px;
+        width:30px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+        margin-right: 5px;
+        ion-icon{
+            height: 25px;
+            width:25px;
+            
+        }
+    }
+
+}
+.atributos{
+    align-items: center;
+    display:flex;
+    margin-left: 10px;
+}
+.texto{
+    margin-bottom:15px;
+    text-align: justify;
+    a{
+    font-size: 13px;
+    text-align: justify;
+     }
+}
+
+.card{
+    justify-content: left;
+    display:flex;
+    margin-left:13px;
+    align-items: center;
+}
+
+.texto{
+    p{
+        text-align: justify;
+        margin: 0 10px;
+        font-size: 15px;
+    }
+}
+.dados{
+    font-style: italic;
+    font-size: 13px;
+    text-align: center;
+}
+
+ ion-fab{
+
+     ion-fab-button{
+        width: 35px;
+        height: 35px;
+    }
+   
+ }
+
+ img{
+     object-fit: cover;
+ }
+
+button{
+    margin-top: 12px;
+    font-size: 12px;
+    background-color: white;
+}
+
+.link{
+    text-align: center;
+    font-size: 16px;
+    margin: 40px 20px 10px 20px;
+    cursor: pointer;
+
+    a{
+        font-size: 16px;
+        color:red;
+    }
+ }
+

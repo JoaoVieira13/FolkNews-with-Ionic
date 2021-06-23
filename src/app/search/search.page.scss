@@ -1,0 +1,56 @@
+img{
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+}
+
+ion-content {
+    background-color: white;
+    --offset-bottom: auto !important;
+    --overflow: hidden;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+form{
+  display: flex;
+  button{
+    visibility: hidden;
+  }
+}
+  ion-card{
+    margin-bottom: 30px;
+ }
+
+ ion-card-title{
+    font-size: 20px;
+    margin-top: 10px;
+ }
+
+ ion-card-subtitle{
+   margin-top: 10px;
+
+   p{
+   font-size: 10px;
+   text-align: justify;
+   margin-top: 5px;
+   margin-left: 17px;
+   }
+ }
+
+ ion-card-content{
+   text-align: justify;
+ }
+
+ .titulo{
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+ion-toolbar{
+  margin-top:50px;
+}
+ 

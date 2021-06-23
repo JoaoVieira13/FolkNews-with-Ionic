@@ -1,0 +1,40 @@
+
+
+<ion-content>
+  <ion-slides>
+  <ion-slide>
+    <ion-button color="primary" routerLink="/ultimas" >Destaques</ion-button>
+    <ion-button color="primary" routerLink="/saude">Saúde</ion-button>
+    <ion-button color="primary" routerLink="/desporto">Desporto</ion-button>
+</ion-slide>
+<ion-slide>
+    <ion-button color="primary" routerLink="/ciencias">Ciências</ion-button>
+    <ion-button color="primary" routerLink="/economia">Economia</ion-button>
+    <ion-button color="primary" routerLink="/mundo">Mundo</ion-button>
+  </ion-slide>
+  </ion-slides>
+
+  <div class="titulo">
+    <strong>Últimas Notícias</strong>
+    </div>
+
+  <ng-container *ngFor="let pop of popular">
+  <a [routerLink]="['/noticia', pop.id]" class="links">
+    <ion-card class="cardUltimas">
+      <img src="{{ pop.multimediaPrincipal }}">
+      <ion-card-header>
+        <ion-card-title>{{ pop.titulo }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        {{ pop.descricao }}
+      </ion-card-content>
+      <ion-card-subtitle>
+        <p>Data: {{ pop.data | date: "M/d/yy, h:mm a" }} </p>
+        <p>Autor: {{ pop.autores[0].nome }}</p>
+      </ion-card-subtitle>
+    </ion-card>
+  </a>
+</ng-container>
+
+</ion-content>
+
